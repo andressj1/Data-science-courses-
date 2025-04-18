@@ -1,0 +1,22 @@
+#Clone 
+git init 
+git clone https://github.com/andressj1/Data-science-courses-.git  
+
+--The link is only an example--
+
+#Push
+git add .
+git commit -m "ajsdlaksjdlajd" 
+git push origin main 
+
+-- ajsdlaksjdlajd is only an example --
+
+#Pull 
+git pull origin main 
+
+#Actual configuration
+git config --list
+
+#Sign in
+git config --global user.name "andressj1"
+git config --global user.email andressj1@gmail.com
