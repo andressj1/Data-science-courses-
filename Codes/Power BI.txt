@@ -1,0 +1,25 @@
+A. Clic Izq en Tabla empleados
+B. Seleccionar "Nueva Medida"
+
+1. Total De Alguna Categoría Sin Repetidos
+Total Empleados = COUNTROWS('Tabla_Empleados')
+
+2. Promedio 
+Sueldo Prom = AVERAGE('Tabla_Empleados'[Sueldo])
+
+--------------------------------------------------------
+A. Crear una nueva columna;  
+
+3. Calcular Edad	
+Edad = INT(YEARFRAC('Tabla_Empleados'[Nacimiento], TODAY()))
+
+-INT convierte en entero 
+
+4. Columna Condicional
+Grupo_Edad =
+SWITCH(
+	TRUE(),
+	'Tabla_Empleados'[Edad] <=30, "20-30",
+	'Tabla_Empleados'[Edad] <=40, "30-40",
+	"Mas 40"
+)
