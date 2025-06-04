@@ -7,6 +7,26 @@ Total Empleados = COUNTROWS('Tabla_Empleados')
 2. Promedio 
 Sueldo Prom = AVERAGE('Tabla_Empleados'[Sueldo])
 
+3. Suma
+Total Finanzas = SUM('Finanzas'[Cantidad])
+
+4. Calculate
+Ingresos = CALCULATE(SUM('Finanzas'[Cantidad]), Finanzas[Tipo] = "Ingresos")
+	# Le dice a DAX: “Calcula [Cantidad] pero bajo ciertas condiciones que te voy a dar”.
+
+5. Resta
+Utilidad = [Ingresos]-[Gastos]
+
+6. Division 
+Cuota= [Gastos] / [Presupuesto]
+
+7. Saldo (Compleja)
+Saldo = CALCULATE( [Utilidad], FILTER( ALL(Finanzas) , Finanzas[Fecha] <= MAX(Finanzas[Fecha]))) 
+
+	# ALL(Finanzas): Quita todos los filtros que existan sobre la tabla Finanzas. Es decir, ve toda la tabla sin ningún filtro activo.
+	# FILTER(... , Finanzas[Fecha] <= MAX(Finanzas[Fecha])): Luego reaplica un filtro personalizado: incluye solo las filas donde la fecha sea menor o
+	         igual a la fecha máxima del contexto actual.
+
 --------------------------------------------------------
 A. Crear una nueva columna;  
 
