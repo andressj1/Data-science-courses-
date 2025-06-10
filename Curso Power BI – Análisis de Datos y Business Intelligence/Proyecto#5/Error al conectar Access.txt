@@ -1,0 +1,10 @@
+Error al conectar base de datos Access 
+ 
+1 - Ingresa al siguiente link: https://www.microsoft.com/es-es/download/details.aspx?id=54920
+
+2 - Descarga el componente redistribuible y lo instalas
+
+3 - Reinicias Power BI Desktop y vuelves a cargar la base de datos Access.
+
+
+Si te sigue sin funcionar, puedes desinstalar Power BI e nstalarlo con la opción de 32 bits (El que dice Setup sin x64): https://www.microsoft.com/es-es/download/details.aspx?id=58494

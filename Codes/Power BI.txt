@@ -43,3 +43,11 @@ SWITCH(
 	'Tabla_Empleados'[Edad] <=40, "30-40",
 	"Mas 40"
 )
+
+
+--------------------------------------------------------
+Ultima actualización
+1. Obtener datos 
+2. Consulta en blanco
+3. Escribir; 
+= #table(type table[Ultima Actualización=datetime], {{DateTime.LocalNow()}})
